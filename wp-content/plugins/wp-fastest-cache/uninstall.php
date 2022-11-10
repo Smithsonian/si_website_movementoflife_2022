@@ -20,6 +20,7 @@
 	delete_option("WpFastestCache");
 	delete_option("WpFcDeleteCacheLogs");
 	delete_option("WpFastestCacheCDN");
+	delete_option("WpFastestCacheCSP");
 	delete_option("WpFastestCacheExclude");
 	delete_option("WpFastestCachePreLoad");
 	delete_option("WpFastestCacheCSS");

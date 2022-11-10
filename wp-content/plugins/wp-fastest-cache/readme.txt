@@ -3,8 +3,8 @@ Contributors: emrevona
 Donate link: http://profiles.wordpress.org/emrevona/
 Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
-Tested up to: 6.0
-Stable tag: 1.0.6
+Tested up to: 6.1
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,6 +130,10 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.0.7 =
+* <strong>[FEATURE]</strong> Clearing Specific Pages (BETA) [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-of-specific-urls-when-updating-or-posting/">Details</a>]
+* to add last-modified header when cache is served via php
 
 = 1.0.6 =
 * to serve sources via cdn for excluded pages if cdn is enabled

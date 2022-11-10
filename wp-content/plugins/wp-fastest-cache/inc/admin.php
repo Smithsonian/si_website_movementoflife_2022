@@ -1621,6 +1621,34 @@
 					    			echo "WpFcTimeout.init();";
 					    		} ?>
 				    	</script>
+
+
+				    	<?php if(defined("WPFC_ENABLE_CLEARING_SPECIFIC_PAGES") && WPFC_ENABLE_CLEARING_SPECIFIC_PAGES){ ?>
+
+					    	<div class="exclude_section_clear" style=" margin-left: 3%; width: 95%; margin-bottom: 12px; margin-top: 0;"><div></div></div>
+
+					    	<h2 style="padding-bottom:10px;padding-left:20px;float:left;"><?php _e("Clearing Specific Pages", "wp-fastest-cache"); ?></h2>
+
+					    	<div style="float:left;margin-top:-37px;padding-left:628px;">
+					    		<button type="button" <?php echo $disable_wp_cron;?> class="wpfc-add-new-csp-button wpfc-dialog-buttons" style="display: inline-block;padding: 4px 10px;">
+					    			<span><?php _e("Add New Rule", "wp-fastest-cache"); ?></span>
+								</button>
+					    	</div>
+
+					    	<div class="wpfc-csp-list" style="display: block;width:98%;float:left;">
+
+					    	</div>
+
+					    	<?php
+					    		include(WPFC_MAIN_PATH."templates/clearing_specific_pages.php");
+					    	?>
+
+				    	<?php } ?>
+
+
+
+
+
 				    </div>
 
 

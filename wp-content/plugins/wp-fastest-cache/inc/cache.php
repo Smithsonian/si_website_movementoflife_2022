@@ -389,6 +389,12 @@
 					}
 
 					if($content = @file_get_contents($this->cacheFilePath."index.".$file_extension)){
+
+						if($file_extension == "html"){
+							header('Last-Modified: '.gmdate('D, d M Y H:i:s', filemtime($this->cacheFilePath."index.".$file_extension)).' GMT', true, 200);
+						}
+
+
 						if(defined('WPFC_REMOVE_VIA_FOOTER_COMMENT') && WPFC_REMOVE_VIA_FOOTER_COMMENT){
 							$via_php = "";
 						}
