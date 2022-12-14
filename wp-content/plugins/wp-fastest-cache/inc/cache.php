@@ -459,7 +459,7 @@
 									   FROM `$wpdb->users` 
 									   INNER JOIN `$wpdb->usermeta` 
 									   ON `$wpdb->users`.`user_login` = \"$username\" AND 
-									   `$wpdb->usermeta`.`meta_key` = \"wp_user_level\" AND 
+									   `$wpdb->usermeta`.`meta_key` LIKE \"%_user_level\" AND 
 									   `$wpdb->usermeta`.`meta_value` = \"10\" AND 
 									   `$wpdb->users`.`ID` = `$wpdb->usermeta`.user_id ;"
 									);

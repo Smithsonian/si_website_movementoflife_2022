@@ -4,7 +4,7 @@ Donate link: http://profiles.wordpress.org/emrevona/
 Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
 Tested up to: 6.1
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,6 +130,12 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.0.9 =
+* to improve the style of exclude feature wizard
+* to fix hiding the toolbar when logged in
+* to fix PHP Notice: Undefined offset: -1 in js-utilities.php on line 67
+* to fix PHP Fatal error: Uncaught Error: Non-static method cannot be called statically in clearing-specific-pages.php on line 58
 
 = 1.0.8 =
 * to stop showing the "DONOTCACHEPAGE is defined as TRUE" comment in the footer for the ajax requests
