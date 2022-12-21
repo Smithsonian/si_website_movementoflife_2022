@@ -11,21 +11,19 @@
 	<div class="billboard">
 		<div class="billboard-slideshow-slide" style="background-image: url(<?php echo esc_url(get_field('billboard_image',  5)['url']); ?>); display: block;">
 			<i class="fa fa-chevron-left" aria-hidden="true"></i>
-			<a href="<?php echo esc_url(get_field('billboard_link', 5)['url']); ?>" target="<?php get_field('billboard_link', 5)['target'] ? get_field('billboard_link', 5)['target'] : '_self'; ?>" title="<?php echo esc_html(get_field('billboard_link', 5)['title']); ?>">
-				<div class="slide-text-wrapper">
-					<div class="slide-text">
-					<div class="header-subhead">
-						<h2>
-							<?php if (get_field('billboard_text', 5)): ?>
-								<?php the_field('billboard_text', 5); ?>	
-							<?php else: ?>
-								<?php wp_title(''); ?>
-							<?php endif; ?>
-						</h2>
-					</div>
-					</div>
+			<div class="slide-text-wrapper">
+				<div class="slide-text">
+				<div class="header-subhead">
+					<h2>
+						<?php if (get_field('billboard_text', 5)): ?>
+							<?php the_field('billboard_text', 5); ?>	
+						<?php else: ?>
+							<?php wp_title(''); ?>
+						<?php endif; ?>
+					</h2>
 				</div>
-			</a>
+				</div>
+			</div>
 			<i class="fa fa-chevron-right" aria-hidden="true"></i>
 		</div>
 	</div>
