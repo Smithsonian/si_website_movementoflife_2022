@@ -9,7 +9,7 @@
 <!-- Begin billboard -->
 <?php if (get_field('billboard_image')): ?>
 	<div class="billboard">
-		<div class="billboard-slideshow-slide" style="background-image: url(<?php echo esc_url(get_field('billboard_image',  5)['url']); ?>); display: block;">
+		<div class="billboard-slideshow-slide" style="background-image: url(<?php echo esc_url(get_field('billboard_image')['url']); ?>); display: block;">
 			<i class="fa fa-chevron-left" aria-hidden="true"></i>
 			<a href="<?php echo esc_url(get_field('billboard_link')['url']); ?>" target="<?php get_field('billboard_link')['target'] ? get_field('billboard_link')['target'] : '_self'; ?>" title="<?php echo esc_html(get_field('billboard_link')['title']); ?>">
 				<div class="slide-text-wrapper">
