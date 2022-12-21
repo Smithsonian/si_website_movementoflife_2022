@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: Species
+* Template Name: Species Landing Page
 **/
 ?>
 
