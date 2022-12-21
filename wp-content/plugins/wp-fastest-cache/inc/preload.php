@@ -507,7 +507,8 @@
 				}else{
 					if(isset($options->wpFastestCachePreload_restart)){
 						foreach ($pre_load as $pre_load_key => &$pre_load_value) {
-							if($pre_load_key != "number" && $pre_load_key != "order"){
+							//if($pre_load_key != "number" && $pre_load_key != "order"){
+							if($pre_load_key != "number"){
 								$pre_load_value = 0;
 							}
 						}
