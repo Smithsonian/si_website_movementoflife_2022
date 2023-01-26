@@ -4,7 +4,7 @@ Donate link: http://profiles.wordpress.org/emrevona/
 Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
 Tested up to: 6.1
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,6 +130,11 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.1.0 =
+* to show cache if the url contains a parameter of Yandex Click Identifier
+* [FEATURE] Excluding Yandex Click Identifier [<a target="_blank" href="https://www.wpfastestcache.com/features/cache-url-with-yandex-click-id-parameters-querystring/">Details</a>]
+* [FEATURE] Adding "Regular Expression" option for the Exclude Pages feature [<a target="_blank" href="https://www.wpfastestcache.com/features/using-regular-expression-to-exclude-a-page/">Details</a>]
 
 = 1.0.9 =
 * to improve the style of exclude feature wizard
