@@ -24,6 +24,7 @@
 
 			$home = get_option('home');
 			$host = preg_replace("/(https?\:\/\/)(.+)/", "$2", $home);
+			$host = preg_replace("/\/.*/", "", $host);
 
 			$schema = preg_replace("/(https?\:\/\/).+/", "$1", $home);
 			$schema = strtolower($schema);
@@ -41,20 +42,38 @@
 				'sslverify' => $ssl_verification,
 			);
 
+
 			$response = wp_remote_request($request_url, $request_args );
 
-			
 
 			if(is_wp_error( $response ) || $response['response']['code'] != '200'){
+
 				if($schema === 'https://'){
 					$request_url = str_replace("https://", "http://", $request_url);
 				}else{
 					$request_url = str_replace("http://", "https://", $request_url);
 				}
 
+
 				$response = wp_remote_request($request_url, $request_args );
 
+
 				if(is_wp_error( $response ) || $response['response']['code'] != '200'){
+
+					if($response['response']['code'] == "501"){
+						$text = '"Purge" method is not allowed';
+
+						if(isset($response['headers']['allow'])){
+							$text = $text.". The allowed methods are ".$response['headers']['allow'];
+							$text = $text.". Please contact your hosting provider";
+						}
+
+						return array("success" => "", "message" => $text);
+					}
+
+
+					
+
 					return array("success" => "", "message" => $response->get_error_message());
 				}
 			}

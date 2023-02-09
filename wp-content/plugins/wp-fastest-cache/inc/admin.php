@@ -1646,8 +1646,6 @@
 
 
 
-				    	<?php if(defined("WPFC_ENABLE_VARNISH") && WPFC_ENABLE_VARNISH){ ?>
-
 
 				    	<div class="exclude_section_clear" style=" margin-left: 3%; width: 95%; margin-bottom: 12px; margin-top: 0;"><div></div></div>
 
@@ -1668,9 +1666,7 @@
 				    		include(WPFC_MAIN_PATH."templates/varnish.php");
 				    	?>
 
-				   		<?php } ?>
-
-
+	
 
 
 

@@ -800,6 +800,16 @@
 			}else{
 				$content = $buffer;
 
+				if(defined('WPFC_ENABLE_DELAY_JS') && WPFC_ENABLE_DELAY_JS){
+					if(file_exists(WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium/pro/library/delay-js.php")){
+						if(!$this->is_amp($content)){
+							include_once WPFC_WP_PLUGIN_DIR."/wp-fastest-cache-premium/pro/library/delay-js.php";
+							$delay = new WpFastestCacheDelayJS($content);
+							$content = $delay->action();
+						}
+					}
+				}
+
 				if(isset($this->options->wpFastestCacheRenderBlocking) && method_exists("WpFastestCachePowerfulHtml", "render_blocking")){
 					if(class_exists("WpFastestCachePowerfulHtml")){
 						if(!$this->is_amp($content)){

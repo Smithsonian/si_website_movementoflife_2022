@@ -3,7 +3,7 @@
 Plugin Name: WP Fastest Cache
 Plugin URI: http://wordpress.org/plugins/wp-fastest-cache/
 Description: The simplest and fastest WP Cache system
-Version: 1.1.0
+Version: 1.1.1
 Author: Emre Vona
 Author URI: https://www.wpfastestcache.com/
 Text Domain: wp-fastest-cache
@@ -1505,9 +1505,12 @@ GNU General Public License for more details.
 				$parent = get_term_by("id", $term->parent, $term->taxonomy);
 				$this->delete_cache_of_term($parent->term_taxonomy_id);
 			}
+		}
 
-
-
+		public function unlink($path){
+			if(file_exists($path)){
+				unlink($path);
+			}
 		}
 
 		public function deleteHomePageCache($log = true){
@@ -1526,8 +1529,8 @@ GNU General Public License for more details.
 				$site_url_path = trim($site_url_path, "/");
 
 				if($site_url_path){
-					@unlink($this->getWpContentDir("/cache/all/").$site_url_path."/index.html");
-					@unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/").$site_url_path."/index.html");
+					$this->unlink($this->getWpContentDir("/cache/all/").$site_url_path."/index.html");
+					$this->unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/").$site_url_path."/index.html");
 
 					//to clear pagination of homepage cache
 					$this->rm_folder_recursively($this->getWpContentDir("/cache/all/").$site_url_path."/page");
@@ -1539,8 +1542,8 @@ GNU General Public License for more details.
 				$home_url_path = trim($home_url_path, "/");
 
 				if($home_url_path){
-					@unlink($this->getWpContentDir("/cache/all/").$home_url_path."/index.html");
-					@unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/").$home_url_path."/index.html");
+					$this->unlink($this->getWpContentDir("/cache/all/").$home_url_path."/index.html");
+					$this->unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/").$home_url_path."/index.html");
 
 					//to clear pagination of homepage cache
 					$this->rm_folder_recursively($this->getWpContentDir("/cache/all/").$home_url_path."/page");
@@ -1572,13 +1575,8 @@ GNU General Public License for more details.
 				}
 			}
 
-			if(file_exists($this->getWpContentDir("/cache/all/index.html"))){
-				@unlink($this->getWpContentDir("/cache/all/index.html"));
-			}
-
-			if(file_exists($this->getWpContentDir("/cache/wpfc-mobile-cache/index.html"))){
-				@unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/index.html"));
-			}
+			$this->unlink($this->getWpContentDir("/cache/all/index.html"));
+			$this->unlink($this->getWpContentDir("/cache/wpfc-mobile-cache/index.html"));
 
 			//to clear pagination of homepage cache
 			$this->rm_folder_recursively($this->getWpContentDir("/cache/all/page"));

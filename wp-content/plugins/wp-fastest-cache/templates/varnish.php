@@ -33,7 +33,7 @@
 					    	<label class="wiz-error-msg"></label>
 					    </div>
 
-					    <p class="wpfc-bottom-note" style="margin-bottom:-10px;"><a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-of-specific-urls-when-updating-or-posting/">Note: Please read this article to learn about this feature.</a></p>
+					    <p class="wpfc-bottom-note" style="margin-bottom:-10px;"><a target="_blank" href="https://www.wpfastestcache.com/features/using-varnish-cache-with-wp-fastest-cache/">Note: Please read this article to learn about this feature.</a></p>
 
 
 
@@ -192,6 +192,8 @@
 
 					modal.find("label.wiz-error-msg").text("");
 
+					modal.find("input").attr('disabled', true);
+
 					Wpfc_New_Dialog.id = modal_id;
 					Wpfc_New_Dialog.disable_button("finish");
 
@@ -203,16 +205,23 @@
 					    success: function(res){
 					    	Wpfc_New_Dialog.enable_button("finish");
 
+					    	modal.find("input").attr('disabled', false);
+
 					    	if(!res.success){
 					    		modal.find("label.wiz-error-msg").text(res.message);
 					    	}else{
+					    		jQuery("div#wpfc-wizard-varnish").find("input[name='server']").val(server);
 						    	jQuery("div.varnish-cache-list").find("div.meta").addClass("isConnected");
 
 						    	modal.remove();
 					    	}
 					    },
 					    error: function(e) {
-					    	alert("unknown error");
+					    	Wpfc_New_Dialog.enable_button("finish");
+
+					    	modal.find("input").attr('disabled', false);
+					    	modal.find("label.wiz-error-msg").text("Please make sure that your server has Varnish Cache");
+
 					    }
 					});
 
