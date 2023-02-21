@@ -105,6 +105,7 @@
             <h3><?php echo get_field_object('about_our_sponsors')['label']; ?></h3>
 
             <?php while (have_rows('about_our_sponsors')): the_row(); ?>
+                <?php if (get_sub_field('about_our_sponsors_new_line')): ?><br><?php endif; ?>
                 <?php if (get_sub_field('about_our_sponsors_image')): ?>
                     <?php if (get_sub_field('about_our_sponsors_link')): ?>
                         <a href="<?php echo esc_url(get_sub_field('about_our_sponsors_link')['url']); ?>" target="<?php get_sub_field('about_our_sponsors_link')['target'] ? get_sub_field('about_our_sponsors_link')['target'] : '_self'; ?>" title="<?php echo esc_html(get_sub_field('about_our_sponsors_link')['title']); ?>">
@@ -124,6 +125,7 @@
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
+                <?php if (get_sub_field('about_our_sponsors_new_line')): ?><br><?php endif; ?>
             <?php endwhile;  ?>
         <?php endif; ?>
         <!-- End Our Sponsors -->
@@ -133,7 +135,7 @@
             <h3><?php echo get_field_object('about_our_partners')['label']; ?></h3>
 
             <?php while (have_rows('about_our_partners')): the_row(); ?>
-                <?php if (get_sub_field('about_our_sponsors_new_line')): ?><br><?php endif; ?>
+                
                 <div class="sponsorwrap">
                     <?php if (get_sub_field('about_our_partners_link')): ?>
                         <a href="<?php echo esc_url(get_sub_field('about_our_partners_link')['url']); ?>" target="<?php get_sub_field('about_our_partners_link')['target'] ? get_sub_field('about_our_partners_link')['target'] : '_self'; ?>" title="<?php echo esc_html(get_sub_field('about_our_partners_link')['title']); ?>">
@@ -143,7 +145,6 @@
                         </a>
                     <?php endif; ?>
                 </div>
-                <?php if (get_sub_field('about_our_sponsors_new_line')): ?><br><?php endif; ?>
             <?php endwhile; ?>
         <?php endif; ?>
         <!-- End Our Partners -->
