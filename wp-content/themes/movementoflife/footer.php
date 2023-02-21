@@ -96,6 +96,28 @@
     </footer>
   </div>
 
+	<!-- START OF SmartSource Data Collector TAG v10.4.23 -->
+    <!-- Copyright (c) 2018 Webtrends Inc.  All rights reserved. -->
+    <script>
+        window.webtrendsAsyncInit=function(){
+            var dcs=new Webtrends.dcs().init({
+                dcsid:"dcsosphm510000omdwvprbh0j_7l6c",
+                domain:"logs1.smithsonian.museum",
+                timezone:-5,
+                i18n:true,
+                fpcdom:".si.edu",
+                plugins:{
+                }
+            }).track();
+        };
+        (function(){
+            var s=document.createElement("script"); s.async=true; s.src=https://www.si.edu/assets/webtrends/webtrends.min.js;
+            var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+        }());
+    </script>
+    <noscript><img alt="dcsimg" id="dcsimg" width="1" height="1" src="//logs1.smithsonian.museum/dcsosphm510000omdwvprbh0j_7l6c/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.4.23&amp;dcssip=si.edu"/></noscript>
+	<!-- END OF SmartSource Data Collector TAG v10.4.23 -->
+
 	<?php wp_footer(); ?>
 </body>
 
