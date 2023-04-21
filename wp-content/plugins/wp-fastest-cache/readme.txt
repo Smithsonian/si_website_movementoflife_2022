@@ -3,8 +3,8 @@ Contributors: emrevona
 Donate link: https://profiles.wordpress.org/emrevona/
 Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
-Tested up to: 6.1
-Stable tag: 1.1.1
+Tested up to: 6.2
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,7 @@ Setup of this plugin is so easy. You don't need to modify the .htacces file. It 
 
 <h4>Performance Optimization</h4>
 
-In the premium version there are many features such as Minify Html, Minify Css, Enable Gzip Compression, Leverage Browser Caching, Add Expires Headers, Combine CSS, Combine JS, Disable Emoji.
+WP Fastest Cache is not only a wp cache plugin but also a speed optimization wordpress cache plugin. There are many features such as Minify Html, Minify Css, Enable Gzip Compression, Leverage Browser Caching, Add Expires Headers, Combine CSS, Combine JS, Disable Emoji.
 
 1. Generating static html files from your dynamic WordPress blog
 2. Minify Html - You can decrease the size of page
@@ -80,27 +80,30 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 
 <h4>Supported languages: </h4>
 
-* 中文 (by suifengtec)
-* Deutsch
-* English
+* Bahasa Indonesia
+* Deutsch (by Thomas Cloer)
 * Español (by Javier Esteban)
-* Español de Venezuela (by Yordan Soares)
 * Español de Argentina (by Mauricio Lopez)
-* فارسی (by Javad Rahimi)
+* Español (Colombia) (by Javier Esteban)
+* Español (Ecuador) (by Javier Esteban)
+* Español (México) (by Yordan Soares)
+* Español de Venezuela (by Yordan Soares)
 * Français (by Cyrille Sanson)
-* Italiana (by Luisa Ravelli)
-* 日本語 (by KUCKLU)
-* Nederlands (by Frans Pronk https://ifra.nl)
-* Polski (by roan24.pl)
-* Português
-* Português do Brasil (Mario Antonio Sesso Junior)
-* Română
-* Русский (by Maxim)
+* Galego (by Jesús Amieiro)
+* Italiano
+* Magyar
+* Nederlands
+* Nederlands (België) (by Pieterjan Deneys)
 * Slovenčina
-* Suomi (by Arhi Paivarinta)
-* Svenska (by Linus Wileryd)
+* Suomi (by arhipaiva)
+* Svenska
 * Türkçe
-* 繁體中文 (Alex Lion)
+* Čeština
+* Русский
+* فارسی
+* 中文（中国大陆）
+* 中文（台灣) (by (Alex Lion))
+* 日本語
 
 == Installation ==
 
@@ -131,6 +134,24 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.1.4 =
+* to check trailing slash for query string cache
+* refactoring process of clearing homepage cache by cache timeout
+
+= 1.1.3 =
+* to change translation system [<a target="_blank" href="https://www.wpfastestcache.com/blog/is-wp-fastest-cache-available-in-other-languages/">Details</a>]
+* refactoring of delete_author_page_cache()
+* to add Czech, Dutch (Belgium), Galician, Hungarian, Indonesian, Japanese, Persian, Spanish (Colombia), Spanish (Ecuador), Spanish (Ecuador), Spanish (Venezuela), Spanish (Argentina), Spanish (Mexico) translations
+* to enable the toolbar settings wizard for the Multisite installation [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-link-on-the-toolbar/">Details</a>]
+* to fix low level vulnerability
+
+= 1.1.2 =
+* to clear cache of next/prev posts after updating or publishing a post
+* to fix E_WARNING: file_get_contents(): No such file or directory in admin.php  on line 377
+* <strong>[FEATURE]</strong> Added ability to disable hook system [<a target="_blank" href="https://www.wpfastestcache.com/features/how-to-disable-clear-cache-hook-system/">Details</a>]
+* to fix PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in preload.php on line 546
+* to fix Notice:  Constant WPFC_CACHE_QUERYSTRING already defined
 
 = 1.1.1 =
 * <strong>[FEATURE]</strong> Varnish Cache Integration [<a target="_blank" href="https://www.wpfastestcache.com/features/using-varnish-cache-with-wp-fastest-cache/">Details</a>]

@@ -113,7 +113,7 @@
 				if(!preg_match("/\.html/i", $_SERVER["REQUEST_URI"])){
 					if($this->is_trailing_slash()){
 						if(!preg_match("/\/$/", $_SERVER["REQUEST_URI"])){
-							if(defined('WPFC_CACHE_QUERYSTRING') && WPFC_CACHE_QUERYSTRING){
+							if(isset($_SERVER["QUERY_STRING"]) && $_SERVER["QUERY_STRING"] && defined('WPFC_CACHE_QUERYSTRING') && WPFC_CACHE_QUERYSTRING){
 							
 							}else if(preg_match("/y(ad|s)?clid\=/i", $this->cacheFilePath)){
 								// yclid
@@ -193,7 +193,9 @@
 					$this->cacheFilePath = preg_replace("/\/*\?.+/", "", $this->cacheFilePath);
 					$this->cacheFilePath = $this->cacheFilePath."/";
 
-					define('WPFC_CACHE_QUERYSTRING', true);
+					if(!defined('WPFC_CACHE_QUERYSTRING')){
+						define('WPFC_CACHE_QUERYSTRING', true);
+					}
 				}
 			}
 		}

@@ -543,7 +543,10 @@
 			}
 
 			$request_url = parse_url($url, PHP_URL_PATH);
-			$request_url = urldecode(trim($request_url, "/"));
+			
+			if($request_url){
+				$request_url = urldecode(trim($request_url, "/"));
+			}
 
 			if(!$request_url){
 				return false;
