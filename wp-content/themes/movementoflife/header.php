@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<!-- Begin Comscore -->
-    <script type="text/javascript">
-		var _comscore = _comscore || [];
-		_comscore.push({ c1: "2", c2: "7741285", c3:"", c4:"movementoflife.si.edu", c5:"", c6:"", c15:"" });
-		(function() {
-			var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-			s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-			el.parentNode.insertBefore(s, el);
-		})();
-	</script>
-	<!-- End Comscore -->
-
-	<!-- Begin Hotjar Tracking Code for https://movementoflife.si.edu/ -->
-	<script>
-		(function(h,o,t,j,a,r){
-			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-			h._hjSettings={hjid:1895016,hjsv:6};
-			a=o.getElementsByTagName('head')[0];
-			r=o.createElement('script');r.async=1;
-			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-	</script>
-	<!-- End Hotjar Tracking Code -->
-
-	<!-- BEGIN Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67330603-11"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KFKGFW5REQ"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'UA-67330603-11');
+		gtag('config', 'G-KFKGFW5REQ');
 	</script>
-	<!-- END Google Analytics -->
 
 	<?php wp_head(); ?>
 </head>
