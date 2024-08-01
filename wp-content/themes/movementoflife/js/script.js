@@ -408,3 +408,10 @@ $(document).ready(function() {
 		$('section#stayInTouch').insertBefore($('section#stayInTouch').prev());
 	}
 });
+
+// Collapsible sections
+document.querySelectorAll('.collapsible-section-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+        this.parentElement.classList.toggle('active');
+    });
+});

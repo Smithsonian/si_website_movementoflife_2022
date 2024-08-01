@@ -276,6 +276,91 @@ img.full-width { width: 100%; }
     }
 }
 
+// Collapsible sections
+.collapsible-sections {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    text-align: left;
+
+    .collapsible-section {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.10);
+
+        &:first-of-type {
+            border-top: 2px solid rgba(0, 0, 0, 0.10);
+        }
+
+        .collapsible-section-label {
+            padding: 35px 20px;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.25px;
+            cursor: pointer;
+
+            i.fa {
+                font-size: 30px;
+                padding-right: 25px;
+                float: right;
+
+                &.fa-caret-down {
+                    display: none;
+                }
+            }
+        }
+        .collapsible-section-content {
+            height: 0;
+            overflow: hidden;
+
+            h3 {
+                color: #000;
+                font-family: $muli;
+                font-size: 22px;
+                font-weight: 700;
+                letter-spacing: 0.22px;
+                text-transform: none;
+            }
+
+            p {
+                color: black;
+            }
+
+            ul {
+                padding-left: 40px;
+            }
+            
+            li {
+                padding-bottom: 20px;
+                font-weight: lighter;
+
+                &:before {
+                    color: black;
+                }
+            }
+        }
+        
+        &.active {
+            .collapsible-section-label {
+                background-color: #F9FAFC;
+
+                i.fa.fa-caret-right {
+                    display: none;
+                }
+                i.fa.fa-caret-down {
+                    display: block;
+                }
+            }
+            
+            .collapsible-section-content {
+                height: auto;
+                padding: 10px 20px;
+                overflow: auto;
+            }
+        }
+    }
+}
+
 #main-content {
     height: 0;
     display: inherit;
@@ -293,6 +378,7 @@ img.full-width { width: 100%; }
 }
 
 .billboard,
+.extended-billboard,
 .billboard-slideshow-slide {
     height: auto;
     margin: auto;
@@ -567,6 +653,49 @@ img.full-width { width: 100%; }
     @media (max-width: 800px) {
         padding: 1vw 3vw;
         font-size: 2vw;
+    }
+}
+
+// Extended billboard
+.extended-billboard {
+    .slide-text-wrapper .slide-text {
+        background-color: rgba(49, 65, 89, 0.5);
+
+        .header-subhead {
+            width: 1000px;
+            max-width: 1000px;
+            padding: 30px 50px;
+
+            h1 {
+                margin: 0 0 40px;
+                font-family: $muli;
+                font-size: 48px;
+                font-weight: normal;
+                letter-spacing: 5px;
+                text-align: left;
+                line-height: 1.5;
+            }
+        
+            p {
+                margin: 0;
+                color: white;
+                font-size: 22px;
+                line-height: 1.5;
+                display: flex;
+                align-items: center;
+                gap: 35px;
+        
+                i.fa {
+                    color: white;
+                    font-size: 28px;
+                    text-shadow: none;
+                    display: inline-block;
+                    position: relative;
+                    top: inherit;
+                    left: inherit;
+                }
+            }
+        }
     }
 }
 
@@ -2060,6 +2189,59 @@ section.explore-map {
         .sponsorwrap {
             padding: 40px 30px 0;
             vertical-align: top;
+        }
+    }
+}
+
+// Workshop page
+.move-bon-planning-workshop {
+    h2 {
+        font-size: 34px;
+        text-align: left;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+
+    section#skipTo {
+        background: white;
+
+        .page-content {
+            padding-top: 100px;
+
+            ul {
+                padding-left: 35px;
+        
+                li {
+                    margin-bottom: 0;
+                    padding-bottom: 20px;
+                    font-weight: 300;
+            
+                    &::before {
+                        color: black;
+                    }
+                }
+            }
+    
+            p strong {
+                color: black;
+                font-weight: 600;
+            }
+        }
+    }
+
+    section#stayInTouch {
+        text-align: center;
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        #mc_embed_signup h2 {
+            font-size: 1.4em;
+            letter-spacing: 2px;
         }
     }
 }
