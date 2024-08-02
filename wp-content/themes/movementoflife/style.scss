@@ -299,6 +299,14 @@ img.full-width { width: 100%; }
             letter-spacing: 0.25px;
             cursor: pointer;
 
+            @media (max-width: 600px) {
+                padding: 35px 20px 35px 40px;
+            }
+
+            &:hover {
+                background-color: #F9FAFC;
+            }
+
             i.fa {
                 font-size: 30px;
                 padding-right: 25px;
@@ -323,6 +331,7 @@ img.full-width { width: 100%; }
             }
 
             p {
+                padding: 0;
                 color: black;
             }
 
@@ -356,6 +365,10 @@ img.full-width { width: 100%; }
                 height: auto;
                 padding: 10px 20px;
                 overflow: auto;
+
+                @media (max-width: 600px) {
+                    padding: 10px 40px;
+                }
             }
         }
     }
@@ -666,6 +679,11 @@ img.full-width { width: 100%; }
             max-width: 1000px;
             padding: 30px 50px;
 
+            @media (max-width: 1000px) {
+                width: auto;
+                padding: 1vw 5vw;
+            }
+
             h1 {
                 margin: 0 0 40px;
                 font-family: $muli;
@@ -674,6 +692,12 @@ img.full-width { width: 100%; }
                 letter-spacing: 5px;
                 text-align: left;
                 line-height: 1.5;
+
+                @media (max-width: 1000px) {
+                    margin-bottom: 4vw;
+                    font-size: 4.5vw;
+                    letter-spacing: 0.5vw;
+                }
             }
         
             p {
@@ -684,6 +708,11 @@ img.full-width { width: 100%; }
                 display: flex;
                 align-items: center;
                 gap: 35px;
+
+                @media (max-width: 1000px) {
+                    font-size: 2vw;
+                    gap: 3.5vw;
+                }
         
                 i.fa {
                     color: white;
@@ -693,6 +722,18 @@ img.full-width { width: 100%; }
                     position: relative;
                     top: inherit;
                     left: inherit;
+
+                    @media (max-width: 1000px) {
+                        font-size: 2vw;
+                    }
+
+                    &.fa-map-marker {
+                        font-size: 38px;
+
+                        @media (max-width: 1000px) {
+                            font-size: 3vw;
+                        }
+                    }
                 }
             }
         }
@@ -2208,8 +2249,22 @@ section.explore-map {
         .page-content {
             padding-top: 100px;
 
+            @media (max-width: 600px) {
+                padding-top: 30px;
+            }
+
+            h2 {
+                @media (max-width: 600px) {
+                    padding: 0 40px;
+                }
+            }
+
             ul {
                 padding-left: 35px;
+
+                @media (max-width: 600px) {
+                    padding: 0 20px 0 75px;
+                }
         
                 li {
                     margin-bottom: 0;
@@ -2226,10 +2281,18 @@ section.explore-map {
                 color: black;
                 font-weight: 600;
             }
+
+            p:has(> img) {
+                @media (max-width: 600px) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
         }
     }
 
     section#stayInTouch {
+        margin-top: 100px;
         text-align: center;
 
         h2 {

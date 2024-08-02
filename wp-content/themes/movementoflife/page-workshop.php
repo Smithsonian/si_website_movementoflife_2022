@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <!-- Begin billboard -->
-<?php if (get_field('billboard_image')): ?>
+<?php if (get_field('extended_billboard_image')): ?>
 	<div class="billboard extended-billboard">
 		<div class="billboard-slideshow-slide" style="background-image: url(<?php echo esc_url(get_field('extended_billboard_image')['url']); ?>); display: block;">
 			<i class="fa fa-chevron-left" aria-hidden="true"></i>
