@@ -4,6 +4,7 @@
 **/
 ?>
 
+<div id="workshopPage">
 <?php get_header(); ?>
 
 <!-- Begin billboard -->
@@ -90,3 +91,4 @@
 <!-- End collapsible sections -->
 
 <?php get_footer(); ?>
+</div>

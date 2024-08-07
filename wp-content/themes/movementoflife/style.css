@@ -2274,65 +2274,65 @@ section.explore-map #map-legend .legend-item .label {
   vertical-align: top;
 }
 
-.move-bon-planning-workshop h2 {
+#workshopPage h2 {
   font-size: 34px;
   text-align: left;
   text-transform: none;
   letter-spacing: 1px;
 }
-.move-bon-planning-workshop section#skipTo {
+#workshopPage section#skipTo {
   background: white;
 }
-.move-bon-planning-workshop section#skipTo .page-content {
+#workshopPage section#skipTo .page-content {
   padding-top: 100px;
 }
 @media (max-width: 600px) {
-  .move-bon-planning-workshop section#skipTo .page-content {
+  #workshopPage section#skipTo .page-content {
     padding-top: 30px;
   }
 }
 @media (max-width: 600px) {
-  .move-bon-planning-workshop section#skipTo .page-content h2 {
+  #workshopPage section#skipTo .page-content h2 {
     padding: 0 40px;
   }
 }
-.move-bon-planning-workshop section#skipTo .page-content ul {
+#workshopPage section#skipTo .page-content ul {
   padding-left: 35px;
 }
 @media (max-width: 600px) {
-  .move-bon-planning-workshop section#skipTo .page-content ul {
+  #workshopPage section#skipTo .page-content ul {
     padding: 0 20px 0 75px;
   }
 }
-.move-bon-planning-workshop section#skipTo .page-content ul li {
+#workshopPage section#skipTo .page-content ul li {
   margin-bottom: 0;
   padding-bottom: 20px;
   font-weight: 300;
 }
-.move-bon-planning-workshop section#skipTo .page-content ul li::before {
+#workshopPage section#skipTo .page-content ul li::before {
   color: black;
 }
-.move-bon-planning-workshop section#skipTo .page-content p strong {
+#workshopPage section#skipTo .page-content p strong {
   color: black;
   font-weight: 600;
 }
 @media (max-width: 600px) {
-  .move-bon-planning-workshop section#skipTo .page-content p:has(> img) {
+  #workshopPage section#skipTo .page-content p:has(> img) {
     margin: 0;
     padding: 0;
   }
 }
-.move-bon-planning-workshop section#stayInTouch {
+#workshopPage section#stayInTouch {
   margin-top: 100px;
   text-align: center;
 }
-.move-bon-planning-workshop section#stayInTouch h2 {
+#workshopPage section#stayInTouch h2 {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-.move-bon-planning-workshop section#stayInTouch #mc_embed_signup h2 {
+#workshopPage section#stayInTouch #mc_embed_signup h2 {
   font-size: 1.4em;
   letter-spacing: 2px;
 }
