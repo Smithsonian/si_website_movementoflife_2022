@@ -687,15 +687,15 @@ img.full-width { width: 100%; }
             h1 {
                 margin: 0 0 40px;
                 font-family: $muli;
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: normal;
                 letter-spacing: 5px;
                 text-align: left;
-                line-height: 1.5;
+                line-height: 1.1;
 
                 @media (max-width: 1000px) {
                     margin-bottom: 4vw;
-                    font-size: 4.5vw;
+                    font-size: 4vw;
                     letter-spacing: 0.5vw;
                 }
             }
@@ -2273,7 +2273,7 @@ section.explore-map {
             
                     &::before {
                         color: black;
-                        
+
                     }
                 }
             }
