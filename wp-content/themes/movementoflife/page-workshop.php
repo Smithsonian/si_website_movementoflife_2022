@@ -93,7 +93,7 @@
 <!-- Begin additional content -->
 <?php if (get_field('collapsible_sections')): ?>
 	<section class="additional-content">
-		<?php the_field('additional-content'); ?>
+		<?php the_field('additional_content'); ?>
 	</section>
 <?php endif; ?>
 <!-- End additional content -->

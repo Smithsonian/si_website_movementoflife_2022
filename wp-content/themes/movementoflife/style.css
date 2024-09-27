@@ -350,6 +350,13 @@ img.full-width {
   }
 }
 
+.additional-content {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  text-align: left;
+}
+
 #main-content {
   height: 0;
   display: inherit;
