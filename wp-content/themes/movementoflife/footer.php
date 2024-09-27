@@ -1,4 +1,4 @@
-
+<?php if (!is_page_template('page-workshop.php')): ?>
 	<section id="stayInTouch">
       	<div class="text-wrapper sign-up">
 			<h2>Stay In Touch</h2>
@@ -78,6 +78,7 @@
 			<a href="mailto:movementoflife@si.edu" class="button">Contact Us</a>
       	</div>
     </section>
+<?php endif; ?>
 	
 	<footer>
         <div class="footer-wrapper">
