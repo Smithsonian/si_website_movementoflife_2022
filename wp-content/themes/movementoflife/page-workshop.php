@@ -90,5 +90,13 @@
 <?php endif; ?>
 <!-- End collapsible sections -->
 
+<!-- Begin additional content -->
+<?php if (get_field('collapsible_sections')): ?>
+	<section class="additional-content">
+		<?php the_field('additional-content'); ?>
+	</section>
+<?php endif; ?>
+<!-- End additional content -->
+
 <?php get_footer(); ?>
 </div>
