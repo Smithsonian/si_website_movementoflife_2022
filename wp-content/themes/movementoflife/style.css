@@ -330,6 +330,16 @@ img.full-width {
 .collapsible-sections .collapsible-section .collapsible-section-content li:before {
   color: black;
 }
+.collapsible-sections .collapsible-section .collapsible-section-content li ul {
+  padding-top: 15px;
+  list-style-type: initial;
+}
+.collapsible-sections .collapsible-section .collapsible-section-content li ul li {
+  display: list-item;
+}
+.collapsible-sections .collapsible-section .collapsible-section-content li ul li:before {
+  display: none;
+}
 .collapsible-sections .collapsible-section.active .collapsible-section-label {
   background-color: #F9FAFC;
 }

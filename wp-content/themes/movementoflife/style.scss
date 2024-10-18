@@ -346,6 +346,19 @@ img.full-width { width: 100%; }
                 &:before {
                     color: black;
                 }
+
+                ul {
+                    padding-top: 15px;
+                    list-style-type: initial;
+
+                    li {
+                        display: list-item;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
         
@@ -2281,7 +2294,6 @@ section.explore-map {
             
                     &::before {
                         color: black;
-
                     }
                 }
             }
