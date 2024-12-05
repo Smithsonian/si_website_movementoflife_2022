@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Simple LDAP Login
-Plugin URI: http://clifgriffin.com/simple-ldap-login/
-Description:  Authenticate WordPress against LDAP.
-Version: 1.6.0
-Author: Clif Griffin Development Inc.
-Author URI: http://cgd.io
+Plugin URI: https://objectiv.co
+Description: Authenticate WordPress against LDAP.
+Version: 1.6.1
+Author: Objectiv
+Author URI: https:/objectiv.co
 */
 
 class SimpleLDAPLogin {
@@ -340,7 +340,7 @@ class SimpleLDAPLogin {
 				return $this->ldap_auth_error("{$this->prefix}login_error", __('<strong>Simple LDAP Login Error</strong>: Your LDAP credentials are correct, but you are not in an authorized LDAP group.'));
 			}
 
-		} elseif ( str_true($this->get_setting('high_security')) ) {
+        } elseif ( apply_filters( 'sll_remove_default_authentication_hook', str_true( $this->get_setting('high_security') ) && ! $local_admin ) ){
 			return $this->ldap_auth_error('invalid_username', __('<strong>Simple LDAP Login</strong>: Simple LDAP Login could not authenticate your credentials. The security settings do not permit trying the WordPress user database as a fallback.'));
 		}
 
@@ -554,9 +554,15 @@ if ( ! function_exists('str_true') ) {
 	 * @return boolean The boolean value of the provided text
 	 **/
 	function str_true ( $string, $istrue = array('yes', 'y', 'true','1','on','open') ) {
-		if (is_array($string)) return false;
-		if (is_bool($string)) return $string;
-		return in_array(strtolower($string),$istrue);
+		if ( is_array( $string ) ) {
+            return false;
+        }
+
+		if ( is_bool($string) ) {
+            return $string;
+        }
+
+		return in_array( strtolower( $string ), $istrue );
 	}
 }
 

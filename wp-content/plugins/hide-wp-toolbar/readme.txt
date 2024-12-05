@@ -1,11 +1,11 @@
 === Hide WP Toolbar ===
 Contributors: jr00ck
-Plugin URI: https://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
-Donate link: https://blog.webguysaz.com/donate/
-Tags: hide, toolbar, minimize, admin bar, toggle, adminbar
+Plugin URI: https://github.com/jr00ck/hide-wp-toolbar/
+Tags: hide, toolbar, minimize, toggle, adminbar
+License: GPLv3
 Requires at least: 3.8
-Tested up to: 6.2.1
-Stable tag: 2.6.1
+Tested up to: 6.5.5
+Stable tag: 2.7
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button.
 
@@ -42,6 +42,9 @@ The toolbar uses CSS to hide and since the toolbar always shows by default, ther
 1. The WordPress Toolbar hidden with only the hide/show button visible.
 
 == Changelog ==
+
+= 2.7 =
+* Fix arrow button position in WordPress 6.6+
 
 = 2.6.1 =
 * Updated plugin assets (icon/screenshots) for compatibility with plugin repo
@@ -90,3 +93,8 @@ The toolbar uses CSS to hide and since the toolbar always shows by default, ther
 
 = 1.3 =
 * Initial public release
+
+== Upgrade Notice ==
+
+= 2.7 =
+* All users of WordPress 6.6 or higher must upgrade for plugins to work properly. Version 2.7 fixes arrow button position in WordPress 6.6+.

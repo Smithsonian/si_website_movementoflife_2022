@@ -2,7 +2,7 @@
 global $SimpleLDAPLogin;
 
 if( isset( $_GET[ 'tab' ] ) ) {
-    $active_tab = $_GET[ 'tab' ];
+    $active_tab = sanitize_text_field( $_GET[ 'tab' ] );
 } else {
 	$active_tab = 'simple';
 }
@@ -13,10 +13,10 @@ if( isset( $_GET[ 'tab' ] ) ) {
     <h2>Simple LDAP Login Settings</h2>
 
     <h2 class="nav-tab-wrapper">
-        <a href="<?php echo add_query_arg( array('tab' => 'simple'), $_SERVER['REQUEST_URI'] ); ?>" class="nav-tab <?php echo $active_tab == 'simple' ? 'nav-tab-active' : ''; ?>">Simple</a>
-        <a href="<?php echo add_query_arg( array('tab' => 'advanced'), $_SERVER['REQUEST_URI'] ); ?>" class="nav-tab <?php echo $active_tab == 'advanced' ? 'nav-tab-active' : ''; ?>">Advanced</a>
-        <a href="<?php echo add_query_arg( array('tab' => 'user'), $_SERVER['REQUEST_URI'] ); ?>" class="nav-tab <?php echo $active_tab == 'user' ? 'nav-tab-active' : ''; ?>">User</a>
-        <a href="<?php echo add_query_arg( array('tab' => 'help'), $_SERVER['REQUEST_URI'] ); ?>" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>">Help</a>
+        <a href="<?php echo esc_url( add_query_arg( array( 'tab' => 'simple' ), sanitize_text_field( $_SERVER['REQUEST_URI'] ) ) ); ?>" class="nav-tab <?php echo esc_attr( $active_tab == 'simple' ? 'nav-tab-active' : '' ); ?>">Simple</a>
+        <a href="<?php echo esc_url( add_query_arg( array( 'tab' => 'advanced' ), sanitize_text_field( $_SERVER['REQUEST_URI'] ) ) ); ?>" class="nav-tab <?php echo esc_attr( $active_tab == 'advanced' ? 'nav-tab-active' : '' ); ?>">Advanced</a>
+        <a href="<?php echo esc_url( add_query_arg( array( 'tab' => 'user' ), sanitize_text_field( $_SERVER['REQUEST_URI'] ) ) ); ?>" class="nav-tab <?php echo esc_attr( $active_tab == 'user' ? 'nav-tab-active' : '' ); ?>">User</a>
+        <a href="<?php echo esc_url( add_query_arg( array( 'tab' => 'help' ), sanitize_text_field( $_SERVER['REQUEST_URI'] ) ) ); ?>" class="nav-tab <?php echo esc_attr( $active_tab == 'help' ? 'nav-tab-active' : '' ); ?>">Help</a>
     </h2>
 
     <form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">

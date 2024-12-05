@@ -2261,11 +2261,13 @@ class adLDAP {
     * @param string $password The password to encode
     * @return string
     */
-    protected function encode_password($password){
-        $password="\"".$password."\"";
-        $encoded="";
-        for ($i=0; $i <strlen($password); $i++){ $encoded.="{$password{$i}}\000"; }
-        return ($encoded);
+    protected function encode_password( $password ){
+        $password = "\"".$password."\"";
+        $encoded = "";
+        for ($i = 0; $i < strlen($password); $i++) {
+            $encoded .= $password[$i] . "\000";
+        }
+        return $encoded;
     }
     
     /**

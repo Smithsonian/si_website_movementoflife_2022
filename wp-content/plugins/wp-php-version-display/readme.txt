@@ -3,7 +3,7 @@
 * Tags:              PHP, admin, support, dashboard, server, version, widget
 * Donate link:     https://paypal.me/arulprasadj?locale.x=en_GB
 * Requires at least: 3.0
-* Tested up to:      6.2
+* Tested up to:      6.7
 * Stable tag:        2.0
 * License:           GPLv2 or later
 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html

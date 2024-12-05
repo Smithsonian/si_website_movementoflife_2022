@@ -3,8 +3,8 @@ Contributors: clifgriffin
 Donate link: http://cgd.io
 Tags: LDAP, authentication, login, active directory, adLDAP
 Requires at least: 3.4
-Tested up to: 4.7.2
-Stable tag: 1.6.0
+Tested up to: 6.6.2
+Stable tag: 1.6.1
 License: GPLv2 or later
 
 Integrating WordPress with LDAP shouldn't be difficult. Now it isn't. Simple LDAP Login provides all of the features, none of the hassles.
@@ -210,7 +210,7 @@ If you are confident your settings are correct and it still does not work, it ma
 Unfortunately I can't be relied upon to assist with these types of requests. I chose not to support these scenarios because they are infrequent and because they confuse everyone else.
 
 = It's still not working! How can I get help? =
-The easiest way to get help is to post a comment on my blog: http://clifgriffin.com/simple-ldap-login/. I'll do my best to get you up and running!
+The easiest way to get help is to post a comment on my blog: http://objectiv.co/simple-ldap-login/. I'll do my best to get you up and running!
 
 == Screenshots ==
 
